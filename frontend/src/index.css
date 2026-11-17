@@ -1,0 +1,19 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+.dashboard-no-scrollbars,
+.dashboard-no-scrollbars *{
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+.dashboard-no-scrollbars::-webkit-scrollbar,
+.dashboard-no-scrollbars *::-webkit-scrollbar{
+  display:none;
+}
+.dashboard-no-scrollbars{
+  overflow-x:clip;
+}
+@layer components{
+  .card{@apply bg-white rounded-xl border border-slate-200 shadow-sm}
+  .btn{@apply inline-flex items-center justify-center gap-2 rounded-lg bg-navy px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-maroon focus-visible:ring-offset-2 disabled:opacity-60}
+  .btn-ghost{@apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-navy transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-maroon disabled:opacity-60}
+  .input{@apply w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/15}
+}
